@@ -17,8 +17,13 @@
               <div class="container">
                 <div class="header__row">
                   <div class="header__title">
-                    <a href="https://www.se.ifmo.ru">Sokolov A. 368823 P3212</a>
+                    <a href="https://www.ya.ru"
+                      >Sokolov A. V. | 368823 | P3212</a
+                    >
+                    <br />
+                    <a href="https://www.se.ifmo.ru">Var. 2228</a> <br />
                   </div>
+                  <button class="footer__title" id="start-anim">Precise mode</button>
                   <nav class="header__menu menu">
                     <div class="menu__icon">
                       <span></span>
@@ -230,6 +235,14 @@
       span.onclick = function () {
         modal.style.display = "none";
       };
+    </script>
+    <script>
+      const button = document.getElementById("start-anim");
+      const box = document.querySelector("body");
+
+      button.addEventListener("click", function () {
+        box.classList.add("animated");
+      });
     </script>
   </body>
 </html>

@@ -197,6 +197,7 @@ html {
   --myred: #f13a23;
   --mygrey: #f5f5f5;
   --myblack: #111;
+  --mypurple: #99226F;
   --mygreen: rgb(99, 215, 41);
 }
 
@@ -207,7 +208,40 @@ body {
   color: var(--myblack);
   background: var(--mygrey);
   background-image: url("../images/lonewolf.jpg");
-  
+  background-position: left;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.animated {
+  animation: move 5s linear infinite alternate; 
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0) translateY(0); 
+  }
+  25% {
+    transform: translateX(200px) translateY(100px);
+  }
+  50% {
+    transform-origin: center;
+    transform: rotate(360deg) translateX(-50px) translateY(200px); 
+  }
+  75% {
+    transform: translateX(-100px) translateY(200px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
 
 body._lock {
@@ -289,15 +323,26 @@ a:focus {
   background-size: 0 0.1875rem, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
-
+  animation: rainbow2 1s infinite;
   -o-transition: background-size 0.3s ease-out 0.1s;
   transition: background-size 0.3s ease-out 0.1s;
 }
 
+@keyframes rainbow2 {
+  0% {color: red;}
+  16% {color: orange;}
+  33% {color: yellow;}
+  50% {color: green;}
+  67% {color: blue;}
+  84% {color: indigo;}
+  100% {color: violet;}
+}
+
+
 .header__title a:hover,
 .header__title a:active,
 .header__title a:focus {
-  color: var(--myblack);
+  color: var(--mypurple);
   background-size: 100% 0.1875rem, auto;
 }
 
@@ -316,7 +361,7 @@ a:focus {
   height: 30px;
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
   background-size: 1600% 100%;
-  animation: rainbow 10s ease infinite;
+  animation: rainbow 5s ease infinite;
 }
 
 @keyframes rainbow {
@@ -451,7 +496,7 @@ a:focus {
   font-weight: 600;
   background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet, red);
   background-size: 1600% 100%;
-  animation: rainbow 10s ease infinite;
+  animation: rainbow 5s ease infinite;
 }
 
 .main__row {
@@ -620,7 +665,7 @@ a:focus {
   /* background: var(--myblack); */
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
   background-size: 1600% 100%;
-  animation: rainbow 10s ease infinite;
+  animation: rainbow 5s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
