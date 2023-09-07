@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <title>OnlyLabs v. 1</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__row">
+            <div class="header__title">
+              <a href="https://www.se.ifmo.ru">Sokolov A. 368823 P3212</a>
+            </div>
+            <nav class="header__menu menu">
+              <div class="menu__icon">
+                <span></span>
+              </div>
+              <div class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="">Lab1</a></li>
+                  <li class="menu__item"><a href="">Lab2</a></li>
+                  <li class="menu__item"><a href="">Lab3</a></li>
+                  <li class="menu__item"><a href="">Lab4</a></li>
+                  <li class="menu__item__special">
+                    <a href="https://github.com/isofinly/"
+                      >OnlyLabs Full Access</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h1 class="main__title">Лабораторная работа #1, вариант 2228</h1>
+          <div class="main__row">
+            <div class="main__left-block">
+              <canvas id="graph"></canvas>
+              <form class="form" action="php/submit.php" method="POST">
+                <label class="form__label">X</label>
+                <div class="form__row">
+                  <div class="form__x-col">
+                    <p><input id="x-m5" name="x" type="radio" value="-5" /></p>
+                    <label for="x-m5">-5</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-m4" name="x" type="radio" value="-4" /></p>
+                    <label for="x-m4">-4</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-m3" name="x" type="radio" value="-3" /></p>
+                    <label for="x-m3">-3</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-m2" name="x" type="radio" value="-2" /></p>
+                    <label for="x-m2">-2</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-m1" name="x" type="radio" value="-1" /></p>
+                    <label for="x-m1">-1</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-0" name="x" type="radio" value="0" /></p>
+                    <label for="x-0">0</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-1" name="x" type="radio" value="1" /></p>
+                    <label for="x-1">1</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-2" name="x" type="radio" value="2" /></p>
+                    <label for="x-2">2</label>
+                  </div>
+                  <div class="form__x-col">
+                    <p><input id="x-3" name="x" type="radio" value="3" /></p>
+                    <label for="x-3">3</label>
+                  </div>
+                </div>
+
+                <label for="Y" class="form__label">Y</label>
+                <div class="form__row">
+                  <input
+                    id="Y"
+                    required
+                    class="form__y-input"
+                    name="y"
+                    placeholder="Введите значение [-3 ... 5]"
+                    type="number"
+                    step="any"
+                    min="-3"
+                    max="5"
+                    value=""
+                  />
+                </div>
+
+                <label class="form__label">R</label>
+                <div class="form__row">
+                  <button class="form__r-btn" name="r" type="button" value="1">
+                    1.0
+                  </button>
+                  <button class="form__r-btn" type="button" value="2">
+                    2.0
+                  </button>
+                  <button class="form__r-btn" type="button" value="3">
+                    3.0
+                  </button>
+                  <button class="form__r-btn" type="button" value="4">
+                    4.0
+                  </button>
+                  <button class="form__r-btn" type="button" value="5">
+                    5.0
+                  </button>
+                </div>
+
+                <div class="form__row">
+                  <button
+                    class="form__big-btn"
+                    disabled
+                    type="submit"
+                    onclick="playSound()"
+                  >
+                    Send dudes
+                  </button>
+                  <button class="form__big-btn" type="reset" id="myImg">
+                    Очистить (не вилкой)
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01" />
+              <div id="caption"></div>
+            </div>
+
+            <div class="main__table-block">
+              <table class="main__table">
+                <thead>
+                  <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Запуск</th>
+                    <th>Работа</th>
+                    <th>Результат</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__text">
+            <a class="footer__title" href="#"> &copy 988 / Русь Святая </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/graph.js"></script>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = "./images/povestka.jpeg";
+      };
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
