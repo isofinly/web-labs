@@ -21,6 +21,13 @@ $exec_time = round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 5) . ' мс
 
 $_SESSION['tdata'][] = [$x, $y, $r, $current_time, $exec_time, $result];
 
+$cookie_name = "sh0o0ting";
+$cookie_value = json_encode($_SESSION['tdata']);
+$cookie_duration = 30 * 24 * 60 * 60; // 30 days in seconds
+
+setcookie($cookie_name, $cookie_value, time() + $cookie_duration, "/");
+    
+
 function check_area($x, $y, $r)
 {
     return 
@@ -37,7 +44,7 @@ function validate_values($x, $y, $r)
         and (is_numeric($y) and $y >= -3 and $y <= 5)
         and in_array($r, [1, 2, 3, 4, 5]);
 }
-    
+
 foreach ($_SESSION["tdata"] as $rdata) {
     echo <<<HTML
     <tr>
