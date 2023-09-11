@@ -23,7 +23,9 @@
                     <br />
                     <a href="https://www.se.ifmo.ru">Var. 2228</a> <br />
                   </div>
-                  <button class="footer__title" id="start-anim">Precise mode</button>
+                  <button class="footer__title" id="start-anim">
+                    ARTILLERY STRIKE
+                  </button>
                   <nav class="header__menu menu">
                     <div class="menu__icon">
                       <span></span>
@@ -65,55 +67,109 @@
                       <div class="form__row">
                         <div class="form__x-col">
                           <p>
-                            <input id="x-m5" name="x" type="radio" value="-5" />
+                            <input
+                              id="x-m5"
+                              name="x"
+                              type="radio"
+                              value="-5"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-m5">-5</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-m4" name="x" type="radio" value="-4" />
+                            <input
+                              id="x-m4"
+                              name="x"
+                              type="radio"
+                              value="-4"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-m4">-4</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-m3" name="x" type="radio" value="-3" />
+                            <input
+                              id="x-m3"
+                              name="x"
+                              type="radio"
+                              value="-3"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-m3">-3</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-m2" name="x" type="radio" value="-2" />
+                            <input
+                              id="x-m2"
+                              name="x"
+                              type="radio"
+                              value="-2"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-m2">-2</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-m1" name="x" type="radio" value="-1" />
+                            <input
+                              id="x-m1"
+                              name="x"
+                              type="radio"
+                              value="-1"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-m1">-1</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-0" name="x" type="radio" value="0" />
+                            <input
+                              id="x-0"
+                              name="x"
+                              type="radio"
+                              value="0"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-0">0</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-1" name="x" type="radio" value="1" />
+                            <input
+                              id="x-1"
+                              name="x"
+                              type="radio"
+                              value="1"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-1">1</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-2" name="x" type="radio" value="2" />
+                            <input
+                              id="x-2"
+                              name="x"
+                              type="radio"
+                              value="2"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-2">2</label>
                         </div>
                         <div class="form__x-col">
                           <p>
-                            <input id="x-3" name="x" type="radio" value="3" />
+                            <input
+                              id="x-3"
+                              name="x"
+                              type="radio"
+                              value="3"
+                              onclick="playClick()"
+                            />
                           </p>
                           <label for="x-3">3</label>
                         </div>
@@ -132,6 +188,7 @@
                           min="-3"
                           max="5"
                           value=""
+                          onchange="playAnvil()"
                         />
                       </div>
 
@@ -142,34 +199,50 @@
                           name="r"
                           type="button"
                           value="1"
+                          onclick="playClick()"
                         >
                           1.0
                         </button>
-                        <button class="form__r-btn" type="button" value="2">
+                        <button
+                          class="form__r-btn"
+                          type="button"
+                          value="2"
+                          onclick="playClick()"
+                        >
                           2.0
                         </button>
-                        <button class="form__r-btn" type="button" value="3">
+                        <button
+                          class="form__r-btn"
+                          type="button"
+                          value="3"
+                          onclick="playClick()"
+                        >
                           3.0
                         </button>
-                        <button class="form__r-btn" type="button" value="4">
+                        <button
+                          class="form__r-btn"
+                          type="button"
+                          value="4"
+                          onclick="playClick()"
+                        >
                           4.0
                         </button>
-                        <button class="form__r-btn" type="button" value="5">
+                        <button
+                          class="form__r-btn"
+                          type="button"
+                          value="5"
+                          onclick="playClick()"
+                        >
                           5.0
                         </button>
                       </div>
 
                       <div class="form__row">
-                        <button
-                          class="form__big-btn"
-                          disabled
-                          type="submit"
-                          onclick="playSound()"
-                        >
+                        <button class="form__big-btn" disabled type="submit">
                           Send dudes
                         </button>
                         <button class="form__big-btn" type="reset" id="myImg">
-                          Очистить (не вилкой)
+                          Очистить (не картошку)
                         </button>
                       </div>
                     </form>
@@ -177,7 +250,37 @@
                 </tr>
               </table>
             </div>
-
+            <div class="anarchy">
+              <div class="tank-left" id="tank-1">
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+              </div>
+              <div class="tank-right" id="tank-2">
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+                <img src="./images/Z8Do.gif" />
+              </div>
+              <div class="explosion" id="expl">
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+                <img src="./images/YQDj.gif" />
+              </div>
+            </div>
+            
             <!-- The Modal -->
             <div id="myModal" class="modal">
               <span class="close">&times;</span>
@@ -215,34 +318,7 @@
 
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/graph.js"></script>
-
-    <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg");
-      var modalImg = document.getElementById("img01");
-      img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = "./images/povestka.jpeg";
-      };
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-    </script>
-    <script>
-      const button = document.getElementById("start-anim");
-      const box = document.querySelector("body");
-
-      button.addEventListener("click", function () {
-        box.classList.add("animated");
-      });
-    </script>
+    <script type="text/javascript" src="js/extra.js"></script>
+    <script></script>
   </body>
 </html>

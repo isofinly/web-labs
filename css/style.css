@@ -210,6 +210,109 @@ body {
   animation: slide 20s linear infinite;
 }
 
+.anarchy {
+  display: none;
+}
+
+.tank-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: tank-roll-left 5s forwards; 
+  width: 100px;
+}
+
+/* Left tanks */
+.tank:nth-child(1) {
+  left: 10%; 
+}
+
+.tank:nth-child(2) {
+  left: calc(15% - 50px);
+}
+
+.tank:nth-child(3) {
+  left: calc(20% - 50px);  
+}
+
+.tank:nth-child(4) {
+  left: calc(25% - 50px);
+} 
+
+.tank:nth-child(5) {
+  left: calc(30% - 50px);
+}
+
+@keyframes tank-roll-left {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+    left: -100px;
+  }
+  
+  50% {
+    transform: rotate(180deg) translateY(-50%);
+    left: calc(50% - 50px);
+  }
+  
+  100% {
+    transform: rotate(360deg) translateY(-50%); 
+    left: calc(100% - 200px);
+  }
+}
+
+.tank-right {
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  animation: tank-roll-right 5s forwards; 
+  width: 100px;
+}
+
+/* Left tanks */
+.tank:nth-child(1) {
+  right: 10%; 
+}
+
+.tank:nth-child(2) {
+  right: calc(15% - 50px);
+}
+
+.tank:nth-child(3) {
+  right: calc(20% - 50px);  
+}
+
+.tank:nth-child(4) {
+  right: calc(25% - 50px);
+} 
+
+.tank:nth-child(5) {
+  right: calc(30% - 50px);
+}
+
+@keyframes tank-roll-right {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+    right: -100px;
+  }
+  
+  50% {
+    transform: rotate(180deg) translateY(-50%);
+    right: calc(50% - 50px);
+  }
+  
+  100% {
+    transform: rotate(360deg) translateY(-50%); 
+    right: calc(100% - 200px);
+    transform: scaleX(-1);
+  }
+}
+
+.explosion {
+  position: absolute;
+  transform: translateY(-25%);
+  left:10%;
+}
+
 @keyframes slide {
   0% {
     background-position: left;
@@ -840,3 +943,4 @@ a:focus {
     width: 100%;
   }
 }
+

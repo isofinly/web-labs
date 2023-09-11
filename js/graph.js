@@ -115,7 +115,8 @@ redrawGraph(rValue);
 
 function printDotOnGraph(xCenter, yCenter, isHit) {
   redrawGraph(rValue);
-  ctx.fillStyle = isHit ? "#00ff00" : "#ff0000";
+  ctx.fillStyle = (isHit=="hit") ? "#00ff00" : "#ff0000";
+  // ctx.fillStyle = "#99226f";
   let x = w / 2 + xCenter * hatchGap * (2 / rValue) - 3,
     y = h / 2 - yCenter * hatchGap * (2 / rValue) - 3;
   ctx.fillRect(x, y, 6, 6);

@@ -30,7 +30,7 @@ yInput.addEventListener("input", () => {
     yInput.setCustomValidity("Поле не может быть пустым.");
   } else if (validityState.rangeUnderflow || validityState.rangeOverflow) {
     yInput.setCustomValidity(
-      "Значение должно находиться в отрезке [-3 ... 3]."
+      "Значение должно находиться в отрезке [-3 ... 5]."
     );
   } else {
     yValid = true;
@@ -95,17 +95,33 @@ form.addEventListener("submit", (e) => {
   xhr.onloadend = () => {
     if (xhr.status === 200) {
       tbody.innerHTML = xhr.response;
-      let isHit = document
-        .querySelector("tbody tr:last-child td:last-child span")
-        .classList.contains("hit");
-      printDotOnGraph(selectedXRadio.value, yInput.value, isHit);
+      let isHit = document;
+      document.querySelectorAll("tbody tr:last-child td:last-child span")[1]
+        .className;
+      if (
+        isHit.querySelectorAll("tbody tr:last-child td:last-child span")[1]
+          .className == "hit"
+      ) {
+        
+        playHit();
+      } else if (
+        isHit.querySelectorAll("tbody tr:last-child td:last-child span")[1]
+          .className == "miss"
+      ) {
+        playMiss();
+      }
+      printDotOnGraph(selectedXRadio.value, yInput.value, isHit.querySelectorAll("tbody tr:last-child td:last-child span")[1]
+      .className);
     } else
       console.log(
         "status: ",
         xhr.status,
-        "X: ", selectedXRadio.value,
-        "Y: ", yInput.value,
-        "R: ", selectedRBtn.value
+        "X: ",
+        selectedXRadio.value,
+        "Y: ",
+        yInput.value,
+        "R: ",
+        selectedRBtn.value
       );
   };
 
@@ -139,10 +155,3 @@ window.onload = () => {
   xhr.open("GET", "php/init.php");
   xhr.send();
 };
-
-function playSound() {
-  const audio = new Audio(
-    "https://www.myinstants.com/media/sounds/spasibo-kloun.mp3"
-  );
-  audio.play();
-}
