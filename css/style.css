@@ -43,36 +43,36 @@
 }
 
 @font-face {
-  font-family: "Caveat";
+  font-family: "Monocraft";
   font-display: swap;
-  src: url("../fonts/Caveat-Regular.ttf") format("truetype");
+  src: url("../fonts/Monocraft.ttf") format("truetype");
   /* url("../fonts/Caveat-Regular.ttf") format("ttf"); */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Caveat";
+  font-family: "Monocraft";
   font-display: swap;
-  src: url("../fonts/Caveat-Medium.ttf") format("truetype");
+  src: url("../fonts/Monocraft.ttf") format("truetype");
   /* url("../fonts/Caveat-Medium.ttf") format("ttf"); */
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Caveat";
+  font-family: "Monocraft";
   font-display: swap;
-  src: url("../fonts/Caveat-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Monocraft.ttf") format("truetype");
   /* url("../fonts/Caveat-SemiBold.ttf") format("ttf"); */
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Caveat";
+  font-family: "Monocraft";
   font-display: swap;
-  src: url("../fonts/Caveat-Bold.ttf") format("truetype");
+  src: url("../fonts/Monocraft.ttf") format("truetype");
   /* url("../fonts/Caveat-Bold.ttf") format("ttf"); */
   font-weight: 700;
   font-style: normal;
